@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../views/Home.vue";
-import Gallery from "../views/Gallery.vue";
-import Translator from "../views/Translator.vue";
-import Philology from "../views/Philology.vue";
+import HomeView from "../views/HomeView.vue";
+import GalleryView from "../views/GalleryView.vue";
+import TranslatorView from "../views/TranslatorView.vue";
+import PhilologyView from "../views/PhilologyView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,7 +10,7 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: Home,
+      component: HomeView,
     },
     {
       path: "/gallery",
@@ -18,7 +18,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import("../views/Gallery.vue"),
+      component: GalleryView,
     },
     {
       path: "/translator",
@@ -26,7 +26,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import("../views/Translator.vue"),
+      component: TranslatorView,
     },
     {
       path: "/philology",
@@ -34,7 +34,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import("../views/Philology.vue"),
+      component: PhilologyView,
     },
   ],
 });

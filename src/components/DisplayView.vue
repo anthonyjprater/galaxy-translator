@@ -1,5 +1,5 @@
 <script setup>
-import Art from '@/Art.vue';
+import ArtView from '@/components/ArtView.vue';
 </script>
 
 <template>
@@ -12,7 +12,7 @@ import Art from '@/Art.vue';
         <div v-for="(item, index) in items" :key="index" class="figure__wrapper">
           <!-- each item uses json data received to provide links to the image, source, alt description, and users name and profile link  -->
           <figure class="figure" @click="myFigure">
-            <Art :src="item.urls.regular" :alt="item.alt_description" :title="item.description" />
+            <ArtView :src="item.urls.regular" :alt="item.alt_description" :title="item.description" />
           </figure>
           <br>
           <p class="photo__credit m-auto text-light">
