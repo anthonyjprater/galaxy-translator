@@ -1,3 +1,9 @@
+<script setup>
+import { ref } from 'vue'
+
+const input = ref(null)
+</script>
+
 <template>
   <div class="translator__app container-fluid col-12">
     <div
@@ -20,11 +26,9 @@
             <article
               class="translator col-12 d-flex flex-column justify-content-center align-items-center"
             >
-              <h1 class="translator__heading">
-                {{ title }}
-              </h1>
+              <h1 class="translator__heading">Translator</h1>
               <div id="prompt" class="translator__prompt bubble">
-                {{ prompt }}
+                What text would you like me to translate for you?
               </div>
               <form action="" class="translator__form text-center my-3">
                 <div id="userInput" class="bubble">
@@ -39,9 +43,7 @@
                     placeholder="Please type your text here so C-3P0 can translate it ... for you..."
                   />
                 </div>
-                <span id="outPut" class="bubble text-output">{{
-                  translation
-                }}</span>
+                <span id="outPut" class="bubble text-output">{{ input }}</span>
                 <button
                   id="translateButton"
                   type="button"

@@ -2,7 +2,7 @@
   <header class="main">
     <nav class="b-navbar navbar-expand-lg">
       <div class="nav__wrapper b-container-fluid">
-        <a class="b-navbar-brand shadow-large d-flex flex-wrap" href="#">
+        <a class="b-navbar-brand" href="#">
           <h1
             class="logo mr-1 text-center b-container"
             data-toggle="tooltip"
@@ -90,21 +90,17 @@ li {
   display: flex;
   justify-content: space-between;
 }
-.b-navbar-brand {
-  font-family: 'Galaxy', sans-serif;
+.logo {
+  /* font-family: 'Galaxy', sans-serif; */
   color: red;
   text-shadow: 2px 2px 2px #ff8080, 0 0 2px #482ff7, 0 0 2px #482ff7;
-  font-family: 'Galaxy';
-  transition: text-shadow 1s ease, color 2s ease, font-weight 2s ease,
-    opacity 2s ease;
+  font-family: SF Distant Galaxy Outline;
+  transition: text-shadow 250ms ease, color 250ms ease;
 }
-.b-navbar-brand:hover {
+.logo:hover {
   color: #fff;
-  text-shadow: 1px 1px 2px gold, 0 0 1rem yellow, 0 0 0.2rem yellow;
-  font-weight: 600;
+  text-shadow: 1px 1px 0px gold, 0 0 0px yellow, 0 0 0px yellow;
   border-radius: 8px;
-}
-.b-navbar-brand:hover {
   font-size: 1.5rem;
 }
 .nav-menu {

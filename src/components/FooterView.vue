@@ -21,7 +21,9 @@
             <span />
             <span />
             <span />
-            <span class="fab fa-facebook-f">F</span>
+            <span class="fab fa-facebook-f"
+              ><font-awesome-icon icon="fa-brands fa-facebook"
+            /></span>
           </div>
           <div class="text">Facebook</div>
         </a>
@@ -31,17 +33,17 @@
             <span />
             <span />
             <span />
-            <span class="fab fa-twitter">T</span>
+            <span class="fab fa-twitter"><font-awesome-icon icon="fa-brands fa-github" /></span>
           </div>
           <div class="text">Twitter</div>
         </a>
-        <a href="https://www.instagram.com/">
+        <a href="https://www.github.com/">
           <div class="layer">
             <span />
             <span />
             <span />
             <span />
-            <span class="fab fa-instagram">I</span>
+            <span class="fab fa-instagram"><font-awesome-icon icon="fa-brands fa-instagram" /></span>
           </div>
           <div class="text">Instagram</div>
         </a>
@@ -51,7 +53,7 @@
             <span />
             <span />
             <span />
-            <span class="fab fa-youtube">Y</span>
+            <span class="fab fa-youtube"><font-awesome-icon icon="fa-brands fa-youtube" /></span>
           </div>
           <div class="text">YouTube</div>
         </a>

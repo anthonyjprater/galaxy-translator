@@ -5,7 +5,6 @@ import FooterView from '@/components/FooterView.vue'
 </script>
 
 <template>
-  View
   <div>
     <HeaderView />
     <LanguageView />
