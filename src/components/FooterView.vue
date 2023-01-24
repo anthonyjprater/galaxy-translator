@@ -22,7 +22,7 @@
             <span />
             <span />
             <span class="fab fa-facebook-f"
-              ><font-awesome-icon icon="fa-brands fa-facebook"
+              ><font-awesome-icon icon="fa-brands fa-facebook" size="2xl"
             /></span>
           </div>
           <div class="text">Facebook</div>
@@ -33,9 +33,9 @@
             <span />
             <span />
             <span />
-            <span class="fab fa-twitter"><font-awesome-icon icon="fa-brands fa-github" /></span>
+            <span class="fab fa-github"><font-awesome-icon icon="fa-brands fa-github" size="2xl" /></span>
           </div>
-          <div class="text">Twitter</div>
+          <div class="text">Github</div>
         </a>
         <a href="https://www.github.com/">
           <div class="layer">
@@ -43,7 +43,7 @@
             <span />
             <span />
             <span />
-            <span class="fab fa-instagram"><font-awesome-icon icon="fa-brands fa-instagram" /></span>
+            <span class="fab fa-instagram"><font-awesome-icon icon="fa-brands fa-instagram" size="xl" /></span>
           </div>
           <div class="text">Instagram</div>
         </a>
@@ -53,7 +53,7 @@
             <span />
             <span />
             <span />
-            <span class="fab fa-youtube"><font-awesome-icon icon="fa-brands fa-youtube" /></span>
+            <span class="fab fa-youtube"><font-awesome-icon icon="fa-brands fa-youtube" size="xl" /></span>
           </div>
           <div class="text">YouTube</div>
         </a>
@@ -70,7 +70,7 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  padding: 0.5rem 0.5rem 2rem;
+  padding: 0.5rem 0.5rem 3rem;
 }
 @media only screen and (max-width: 767px) {
   .footer {
@@ -92,6 +92,7 @@
 }
 .footer__contact_link {
   text-decoration: none;
+  text-shadow: 0px 0px 0px #4b2e83, 1px 1px 2px #85754d ;
 }
 .footer__contact_link:hover {
     font-size: 1.1rem;
@@ -130,6 +131,9 @@
   font-size: 0.8rem;
   line-height: 2.5rem;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   animation: pulse 700ms infinite;
 }
 .icons a:hover .layer span:nth-child(1) {
@@ -167,23 +171,47 @@
 }
 .icons a:nth-child(1) .layer span,
 .icons a:nth-child(1) .text {
-  color: #4267b2;
+  color: #4c75ff;
   border-color: #4267b2;
+  background: linear-gradient(#000, #000) padding-box,
+              linear-gradient(to right, #4267ff, #fff) border-box;
+              border-radius: 50em;
+  padding: 5px;
+  border: 4px solid transparent;
+  box-shadow: inset 1px -1px 4px #aaa;
 }
 .icons a:nth-child(2) .layer span,
 .icons a:nth-child(2) .text {
-  color: #1da1f2;
-  border-color: #1da1f2;
+  color: #c0c0c0;
+  border-color: #c0c0c0;
+  background: linear-gradient(#000, #000) padding-box,
+              linear-gradient(to bottom, #c0c0c0, #000) border-box;
+              border-radius: 50em;
+  padding: 5px;
+  border: 4px solid transparent;
+  box-shadow: inset 1px -1px 2px #aaa;
 }
 .icons a:nth-child(3) .layer span,
 .icons a:nth-child(3) .text {
-  color: #e1306c;
-  border-color: #e1306c;
+  color: #FCAF45;
+  border-color: #405DE6;
+  background: linear-gradient(#000, #000) padding-box,
+              linear-gradient(to bottom right, #405DE6,#E1306C, #FFDC80) border-box;
+              border-radius: 50em;
+  padding: 5px;
+  border: 4px solid transparent;
+  box-shadow: inset 1px -1px 2px #aaa;
 }
 .icons a:nth-child(4) .layer span,
 .icons a:nth-child(4) .text {
-  color: #2867b2;
-  border-color: #2867b2;
+  color: #f00;
+  border-color: #f00;
+  background: linear-gradient(#000, #000) padding-box,
+              linear-gradient(to bottom, #f00, #fff) border-box;
+  border-radius: 50em;
+  padding: 5px;
+  border: 4px solid transparent;
+  box-shadow: inset 1px -1px 2px #aaa;
 }
 .icons a:nth-child(5) .layer span,
 .icons a:nth-child(5) .text {
@@ -194,10 +222,10 @@
   box-shadow: -1px 1px 3px #4267b2;
 }
 .icons a:hover:nth-child(2) .layer span {
-  box-shadow: -1px 1px 3px #1da1f2;
+  box-shadow: -1px 1px 3px #c0c0c0;
 }
 .icons a:hover:nth-child(3) .layer span {
-  box-shadow: -1px 1px 3px #e1306c;
+  box-shadow: -1px 1px 3px #405DE6;
 }
 .icons a:hover:nth-child(4) .layer span {
   box-shadow: -1px 1px 3px #2867b2;
@@ -217,7 +245,7 @@
 .icons a:hover .text {
   bottom: -35px;
   opacity: 1;
-  text-shadow: 2px -2px 2px #888;
+  text-shadow: 1px 1px 20px #fff;
 }
 @keyframes pulse {
   0% {
