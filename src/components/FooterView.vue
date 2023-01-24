@@ -173,7 +173,7 @@
 .icons a:nth-child(1) .text {
   color: #4c75ff;
   border-color: #4267b2;
-  background: linear-gradient(#000, #000) padding-box,
+  background: linear-gradient(#000, #000) paddi ng-box,
               linear-gradient(to right, #4267ff, #fff) border-box;
               border-radius: 50em;
   padding: 5px;
