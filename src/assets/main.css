@@ -13,10 +13,6 @@ a {
   transition: 0.4s;
 }
 
-@media (hover: hover) {
-
-}
-
 @media (min-width: 1024px) {
   body {
     background: #000;

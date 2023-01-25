@@ -27,23 +27,27 @@
           </div>
           <div class="text">Facebook</div>
         </a>
-        <a href="https://twitter.com/?lang=en">
-          <div class="layer">
-            <span />
-            <span />
-            <span />
-            <span />
-            <span class="fab fa-github"><font-awesome-icon icon="fa-brands fa-github" size="2xl" /></span>
-          </div>
-          <div class="text">Github</div>
-        </a>
         <a href="https://www.github.com/">
           <div class="layer">
             <span />
             <span />
             <span />
             <span />
-            <span class="fab fa-instagram"><font-awesome-icon icon="fa-brands fa-instagram" size="xl" /></span>
+            <span class="fab fa-github"
+              ><font-awesome-icon icon="fa-brands fa-github" size="2xl"
+            /></span>
+          </div>
+          <div class="text">Github</div>
+        </a>
+        <a href="https://www.instagram.com/">
+          <div class="layer">
+            <span />
+            <span />
+            <span />
+            <span />
+            <span class="fab fa-instagram"
+              ><font-awesome-icon icon="fa-brands fa-instagram" size="xl"
+            /></span>
           </div>
           <div class="text">Instagram</div>
         </a>
@@ -53,7 +57,9 @@
             <span />
             <span />
             <span />
-            <span class="fab fa-youtube"><font-awesome-icon icon="fa-brands fa-youtube" size="xl" /></span>
+            <span class="fab fa-youtube"
+              ><font-awesome-icon icon="fa-brands fa-youtube" size="xl"
+            /></span>
           </div>
           <div class="text">YouTube</div>
         </a>
@@ -92,10 +98,10 @@
 }
 .footer__contact_link {
   text-decoration: none;
-  text-shadow: 0px 0px 0px #4b2e83, 1px 1px 2px #85754d ;
+  text-shadow: 0px 0px 0px #4b2e83, 1px 1px 2px #85754d;
 }
 .footer__contact_link:hover {
-    font-size: 1.1rem;
+  font-size: 1.1rem;
 }
 /*social media links requiring font awesome update*/
 .icons {
@@ -166,16 +172,16 @@
   height: 3rem;
 }
 .icons a:hover .layer span:nth-child(5).fab {
-    font-size: 1.5rem;
-    line-height: 3rem;
+  font-size: 1.5rem;
+  line-height: 3rem;
 }
 .icons a:nth-child(1) .layer span,
 .icons a:nth-child(1) .text {
   color: #4c75ff;
   border-color: #4267b2;
-  background: linear-gradient(#000, #000) paddi ng-box,
-              linear-gradient(to right, #4267ff, #fff) border-box;
-              border-radius: 50em;
+  background: linear-gradient(#000, #000) padding-box,
+    linear-gradient(to right, #4267ff, #fff) border-box;
+  border-radius: 50em;
   padding: 5px;
   border: 4px solid transparent;
   box-shadow: inset 1px -1px 4px #aaa;
@@ -185,8 +191,8 @@
   color: #c0c0c0;
   border-color: #c0c0c0;
   background: linear-gradient(#000, #000) padding-box,
-              linear-gradient(to bottom, #c0c0c0, #000) border-box;
-              border-radius: 50em;
+    linear-gradient(to bottom, #c0c0c0, #000) border-box;
+  border-radius: 50em;
   padding: 5px;
   border: 4px solid transparent;
   box-shadow: inset 1px -1px 2px #aaa;
@@ -196,8 +202,8 @@
   color: #FCAF45;
   border-color: #405DE6;
   background: linear-gradient(#000, #000) padding-box,
-              linear-gradient(to bottom right, #405DE6,#E1306C, #FFDC80) border-box;
-              border-radius: 50em;
+    linear-gradient(to bottom right, #405de6, #e1306c, #ffdc80) border-box;
+  border-radius: 50em;
   padding: 5px;
   border: 4px solid transparent;
   box-shadow: inset 1px -1px 2px #aaa;
@@ -207,7 +213,7 @@
   color: #f00;
   border-color: #f00;
   background: linear-gradient(#000, #000) padding-box,
-              linear-gradient(to bottom, #f00, #fff) border-box;
+    linear-gradient(to bottom, #f00, #fff) border-box;
   border-radius: 50em;
   padding: 5px;
   border: 4px solid transparent;

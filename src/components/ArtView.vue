@@ -1,18 +1,28 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue'
+
+defineProps({
+  item: {
+    type: Object,
+    required: true,
+  },
+})
+
+const isActive = ref(false)
+</script>
 
 <template>
   <div>
     <img
       class="gallery__image"
-      :src="src"
-      :alt="alt"
-      :title="title"
+      :src="item.urls.regular"
+      :alt="item.alt_description"
+      :title="item.description"
       :class="{ active: isActive }"
-      @click="myImage();$emit('click');"
+      @click="isActive = !isActive"
     />
   </div>
 </template>
-
 
 <style scoped>
 img {
