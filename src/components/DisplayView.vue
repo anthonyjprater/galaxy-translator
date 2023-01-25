@@ -33,3 +33,64 @@ import ArtView from '@/components/ArtView.vue'
     </div>
   </main>
 </template>
+
+<style scoped>
+.title__image {
+    font-family: 'Galaxy';
+    text-shadow: 4px 4px 5px #0000c9, 2px 2px 2px #482ff7, 2px 2px 8px #482ff7;
+    color: #663399;
+    width: 100%;
+    text-align: center;
+}
+.image__page {
+    background-color: #000;
+}
+.gallery {
+    margin-bottom: 7rem;
+}
+h2 > .btn {
+    border: 2px solid #0000c9;
+    box-shadow: 3px 0 100px 1px #0000c9;
+    font-family: 'Moonhouse';
+}
+.wrapper_gallery {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    justify-content: space-around;
+    font-family: 'Poppins';
+}
+.figure__wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5rem;
+    align-items: center;
+}
+.figure {
+    padding: 0.25rem;
+    border: 2px solid #663399;
+    border-radius: 8px;
+    box-shadow: 1px 2px 2px 2px #fff;
+}
+.photo__credit {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+.photo__credit a {
+  color: #fff;
+  text-decoration: none;
+}
+.photo__credit a:hover {
+  text-shadow: 2px 4px 4px #ff8080;
+  font-size: 1.1rem;
+  }
+p {
+    color: #fff;
+}
+ /* On click of image component $emit to parent causes box-shadow appears around ALL figure elements with "live" class thru method "myFigure" by event listener */
+.live {
+    box-shadow: -3px 3px 15px 2px #fff;
+}
+</style>

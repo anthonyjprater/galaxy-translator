@@ -83,6 +83,14 @@ a {
 li {
   list-style-type: none;
 }
+
+header {
+  padding: 0.5rem 0rem;
+}
+
+nav {
+  padding: 1rem;
+}
 .hr_rule {
   border-top: 2px solid #fff;
 }
