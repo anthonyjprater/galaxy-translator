@@ -32,26 +32,19 @@ onMounted(() => {
 </script>
 
 <template>
-  <main class="b-container gallery text-center py-5 mb-5">
-    <h1
-      class="display-4 title__image font-weight-bold pb-2 mt-4 mb-2 border-bottom"
-    >
-      Views of the Galactic Empire
-    </h1>
+  <main class="gallery">
+    <h1 class="title__image">Views of the Galactic Empire</h1>
     <!-- image gallery composed of images fetched by unsplash.com and iterated through with a v-for loop bound by the index key -->
-    <div
-      id="galleryWrapper"
-      class="wrapper_gallery b-row align-content-around rounded pt-3"
-    >
+    <div id="galleryWrapper" class="wrapper_gallery">
       <div v-for="(item, index) in images" :key="index" class="figure__wrapper">
         <!-- each item uses json data received to provide links to the image, source, alt description, and users name and profile link  -->
         <figure class="figure">
-          <ArtView :item="item" />
+          <ArtView :item="item" :index="index"/>
         </figure>
         <br />
-        <p class="photo__credit m-auto text-light">
+        <p class="photo__credit">
           Photo by
-          <a :href="item.user.links.self">{{ item.user.name }}</a> on
+          <a :href="item.user.links.html">{{ item.user.name }}</a> on
           <a :href="siteCredit">UnSplash</a>
         </p>
       </div>
@@ -61,11 +54,12 @@ onMounted(() => {
 
 <style scoped>
 .title__image {
-  font-family: 'Galaxy';
+  font-family: SF Distant Galaxy Outline;
   text-shadow: 4px 4px 5px #0000c9, 2px 2px 2px #482ff7, 2px 2px 8px #482ff7;
-  color: #663399;
+  color: #9966cc;
   width: 100%;
   text-align: center;
+  padding: 1rem 0;
 }
 .image__page {
   background-color: #000;
@@ -73,22 +67,19 @@ onMounted(() => {
 .gallery {
   margin-bottom: 7rem;
 }
-h2 > .btn {
-  border: 2px solid #0000c9;
-  box-shadow: 3px 0 100px 1px #0000c9;
-  font-family: 'Moonhouse';
-}
+
 .wrapper_gallery {
   display: flex;
   flex-flow: row wrap;
   gap: 1rem;
   justify-content: space-around;
+  padding: 1.5rem 0.5rem 0;
   font-family: 'Poppins';
 }
 .figure__wrapper {
   display: flex;
   flex-flow: column nowrap;
-  gap: 0.5rem;
+  gap: 0.25rem;
   align-items: center;
 }
 .figure {
@@ -101,11 +92,12 @@ h2 > .btn {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  gap: 0.5rem;
+  font-size: 0.625rem;
 }
 .photo__credit a {
   color: #fff;
   text-decoration: none;
+  font-size: 0.75rem;
 }
 .photo__credit a:hover {
   text-shadow: 2px 4px 4px #ff8080;
