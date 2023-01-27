@@ -39,7 +39,7 @@ onMounted(() => {
       <div v-for="(item, index) in images" :key="index" class="figure__wrapper">
         <!-- each item uses json data received to provide links to the image, source, alt description, and users name and profile link  -->
         <figure class="figure">
-          <ArtView :item="item" :index="index"/>
+          <ArtView :item="item" :index="index" />
         </figure>
         <br />
         <p class="photo__credit">

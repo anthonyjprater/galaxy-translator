@@ -1,7 +1,7 @@
 <script setup>
-import HeaderView from "@/components/HeaderView.vue";
-import InterfaceView from "@/components/InterfaceView.vue";
-import FooterView from "@/components/FooterView.vue";
+import HeaderView from '@/components/HeaderView.vue'
+import InterfaceView from '@/components/InterfaceView.vue'
+import FooterView from '@/components/FooterView.vue'
 </script>
 
 <template>
@@ -27,7 +27,7 @@ li {
 a {
   color: #42b983;
 }
-  body {
-    background-color: #000;
-  }
+body {
+  background-color: #000;
+}
 </style>

@@ -199,8 +199,8 @@
 }
 .icons a:nth-child(3) .layer span,
 .icons a:nth-child(3) .text {
-  color: #FCAF45;
-  border-color: #405DE6;
+  color: #fcaf45;
+  border-color: #405de6;
   background: linear-gradient(#000, #000) padding-box,
     linear-gradient(to bottom right, #405de6, #e1306c, #ffdc80) border-box;
   border-radius: 50em;
@@ -231,7 +231,7 @@
   box-shadow: -1px 1px 3px #c0c0c0;
 }
 .icons a:hover:nth-child(3) .layer span {
-  box-shadow: -1px 1px 3px #405DE6;
+  box-shadow: -1px 1px 3px #405de6;
 }
 .icons a:hover:nth-child(4) .layer span {
   box-shadow: -1px 1px 3px #2867b2;

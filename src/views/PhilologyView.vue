@@ -43,7 +43,7 @@ const languages = reactive({
 <template>
   <div>
     <HeaderView />
-    <LanguageView :languages="languages"/>
+    <LanguageView :languages="languages" />
     <FooterView />
   </div>
 </template>

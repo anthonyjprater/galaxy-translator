@@ -5,11 +5,15 @@ import TranslatorServices from '@/services/TranslatorServices.js'
 const input = ref(null)
 const translation = ref(null)
 
-// function getTranslation(){
-//   translation.value = input
-// }
+function translate(text) {
+  return TranslatorServices.getTranslation(text)
+    .then((response) => response.json())
+    .then((data) => {
+      translation.value = data.contents.translated
+    })
+}
 
-function freshStart(){
+function freshStart() {
   translation.value = ''
 }
 </script>
@@ -53,14 +57,15 @@ function freshStart(){
                     placeholder="Please type your text here so C-3P0 can translate it ... for you..."
                   />
                 </div>
-                <span id="outPut" class="bubble text-output">{{ input }}
-                translation {{ translation }}</span>
+                <span id="outPut" class="bubble text-output">{{
+                  translation
+                }}</span>
                 <button
                   id="translateButton"
                   type="button"
                   name="translate"
                   class="hidden btn btn-outline-light my-2 form__button"
-                  @click.prevent="TranslatorServices.getTranslation(input)"
+                  @click.prevent="translate(input)"
                 >
                   Translate
                 </button>

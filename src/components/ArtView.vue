@@ -9,7 +9,7 @@ defineProps({
   index: {
     type: Number,
     required: true,
-  }
+  },
 })
 
 const isActive = ref(false)
