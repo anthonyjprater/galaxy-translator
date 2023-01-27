@@ -36,6 +36,10 @@ img {
   object-fit: cover;
 }
 
+.gallery__image:hover {
+  box-shadow: 3px -3px 15px 2px #a0f, 3px -3px 30px 2px #f0a;
+}
+
 .active.green {
   box-shadow: 3px -3px 15px 2px #af0, 3px -3px 30px 2px #0fa;
 }
