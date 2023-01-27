@@ -1,7 +1,17 @@
 <script setup>
 import { ref } from 'vue'
+import TranslatorServices from '@/services/TranslatorServices.js'
 
 const input = ref(null)
+const translation = ref(null)
+
+// function getTranslation(){
+//   translation.value = input
+// }
+
+function freshStart(){
+  translation.value = ''
+}
 </script>
 
 <template>
@@ -43,13 +53,14 @@ const input = ref(null)
                     placeholder="Please type your text here so C-3P0 can translate it ... for you..."
                   />
                 </div>
-                <span id="outPut" class="bubble text-output">{{ input }}</span>
+                <span id="outPut" class="bubble text-output">{{ input }}
+                translation {{ translation }}</span>
                 <button
                   id="translateButton"
                   type="button"
                   name="translate"
                   class="hidden btn btn-outline-light my-2 form__button"
-                  @click.prevent="getTranslation()"
+                  @click.prevent="TranslatorServices.getTranslation(input)"
                 >
                   Translate
                 </button>
