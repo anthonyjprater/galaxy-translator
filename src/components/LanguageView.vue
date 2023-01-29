@@ -11,11 +11,11 @@ defineProps({
 const isOpen = ref([])
 
 function toggleAccordion(index) {
-  if (this.isOpen.includes(index)) {
-    this.isOpen = this.isOpen.filter((i) => i !== index)
+  if (isOpen.value.includes(index)) {
+    isOpen.value = isOpen.value.filter((i) => i !== index)
     return
   }
-  this.isOpen.push(index)
+  isOpen.value.push(index)
 }
 </script>
 
