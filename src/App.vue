@@ -19,7 +19,10 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('./assets/fonts/SFDistantGalaxyOutline.ttf') format('truetype');
+  src: url('./assets/fonts/SFDistantGalaxyOutline.ttf') format('truetype'),
+    url('./assets/fonts/SFDistantGalaxyOutline.eot') format('embedded-opentype'),
+    url('./assets/fonts/SFDistantGalaxyOutline.woff') format('woff'),
+    url('./assets/fonts/SFDistantGalaxyOutline.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Poppins';
