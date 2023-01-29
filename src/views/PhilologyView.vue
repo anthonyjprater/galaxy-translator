@@ -36,6 +36,26 @@ const languages = reactive({
       ariaLabelledBy: 'headingThree',
       ariaExpanded: 'false',
     },
+    {
+      language: 'Gungan',
+      text: 'The native language of the Gungans, an amphibious species from Naboo. In practice, the Gungans often used a pidgin tongue that combined Galactic Basic Standard with Gunganese words and speech patterns.',
+      class: 'green',
+      dataTarget: '#collapseFour',
+      ariaControls: 'collapseFour',
+      id: 'collapseFour',
+      ariaLabelledBy: 'headingFour',
+      ariaExpanded: 'false',
+    },
+    {
+      language: "Mando'a'",
+      text: "The language of the people native to the planet Mandalore. Its written form was known as Mandalorian. Elements of Mando'a were taken from the language of the ancient Taungs of Coruscant, from which the culture stemmed, evolving over time to become something unique.",
+      class: 'red',
+      dataTarget: '#collapseFive',
+      ariaControls: 'collapseFive',
+      id: 'collapseFive',
+      ariaLabelledBy: 'headingFive',
+      ariaExpanded: 'false',
+    },
   ],
 })
 </script>
