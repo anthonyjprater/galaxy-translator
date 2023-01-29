@@ -43,7 +43,24 @@ const languages = reactive({
 <template>
   <div>
     <HeaderView />
-    <LanguageView :languages="languages" />
+    <div class="language-wrapper">
+      <h1>Languages</h1>
+      <LanguageView :languages="languages" />
+    </div>
     <FooterView />
   </div>
 </template>
+
+<style scoped>
+.language-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+h1 {
+  padding: 1rem;
+  font-family: SF Distant Galaxy Outline;
+  color: rgb(0, 255, 13);
+  text-shadow: 4px 4px 5px #00c900, 2px 2px 2px #2ff748, 2px 2px 8px #2ff748;
+}
+</style>
