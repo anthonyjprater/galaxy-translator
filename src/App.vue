@@ -1,12 +1,4 @@
-<script setup>
-import './assets/fonts/Moonhouse.ttf'
-import './assets/fonts/SFDistantGalaxyOutline.woff2'
-import './assets/fonts/SFDistantGalaxyOutline.woff'
-import './assets/fonts/SFDistantGalaxyOutline.eot'
-import './assets/fonts/SFDistantGalaxyOutline.ttf'
-import './assets/fonts/Poppins-Medium.ttf'
-import './assets/fonts/Poppins-Bold.ttf'
-</script>
+<script setup></script>
 
 <template>
   <div id="layout">
