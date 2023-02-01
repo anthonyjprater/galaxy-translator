@@ -38,4 +38,15 @@
   font-display: swap;
   src: url('./assets/fonts/Poppins-Bold.ttf') format('truetype');
 }
+
+@media (max-width: 700px) {
+  textarea.form {
+    max-width: 65vw;
+  }
+
+  textarea.form::placeholder {
+    letter-spacing: 2px;
+    line-height: 1.6;
+  }
+}
 </style>
