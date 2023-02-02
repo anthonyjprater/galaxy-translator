@@ -5,6 +5,7 @@ const isActive = ref(false)
 
 function toggleNav(){
   isActive.value = !isActive.value
+  document.querySelector('.navbar-collapse').classList.toggle('navbar-hidden')
 }
 </script>
 
@@ -34,7 +35,7 @@ function toggleNav(){
           :class="{ active: isActive }"
           @click="toggleNav"
         >
-          Menu
+          
           <div class="hamburger--close">
             <span class="bar b-navbar-toggler-icon"></span>
             <span class="bar b-navbar-toggler-icon"></span>
@@ -42,7 +43,7 @@ function toggleNav(){
           </div>
         </button>
         <!-- binding a class based on the isActive truthy to the nav menu -->
-        <div id="navbarsExample05" class="b-collapse navbar-collapse">
+        <div id="navbarsExample05" class="navbar-collapse navbar-hidden">
           <!-- router-link to nav for each main app vue -->
           <ul
             id="js-menu"
@@ -87,7 +88,6 @@ function toggleNav(){
 
 @media (max-width:700px) {
   .logo {
-    word-wrap: break-word;
     text-align: center;
     max-width: 150px;
     letter-spacing: 1px;
@@ -175,6 +175,26 @@ div > .dropdown-item:hover {
   background-color: #000;
   line-height: 1.5rem;
 }
+
+.navbar-collapse {
+  margin-left: -50px;
+}
+
+.navbar-hidden {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px); /* 1 */
+	-webkit-clip-path: inset(50%);
+		clip-path: inset(50%);  /* 2 */
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap;            /* 3 */
+}
+
+
 .b-navbar-toggle {
   border: 1px solid #482ff7;
   border-radius: 10px;
@@ -227,6 +247,7 @@ div > .dropdown-item:hover {
   }
   .nav-menu.active {
     left: 0;
+    top: 175px;
     z-index: 2;
   }
   .menu {
