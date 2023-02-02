@@ -3,7 +3,7 @@ import { ref } from 'vue'
 
 const isActive = ref(false)
 
-function toggleNav(){
+function toggleNav() {
   isActive.value = !isActive.value
   document.querySelector('.navbar-collapse').classList.toggle('navbar-hidden')
 }
@@ -35,7 +35,6 @@ function toggleNav(){
           :class="{ active: isActive }"
           @click="toggleNav"
         >
-          
           <div class="hamburger--close">
             <span class="bar b-navbar-toggler-icon"></span>
             <span class="bar b-navbar-toggler-icon"></span>
@@ -85,8 +84,7 @@ function toggleNav(){
 </template>
 
 <style scoped>
-
-@media (max-width:700px) {
+@media (max-width: 700px) {
   .logo {
     text-align: center;
     max-width: 150px;
@@ -154,16 +152,19 @@ nav {
   text-shadow: 1px 1px 0px #fff;
   letter-spacing: 3px;
 }
-<<<<<<< Updated upstream
-.b-nav-item .nav-link:hover {
+
+.b-nav-item .nav-link:hover,
+.b-nav-item .nav-link:focus {
   color: #fff;
-=======
+  text-shadow: 2px 2px 2px #482ff7;
+}
+
 .b-nav-item:hover {
   color: #bbb;
->>>>>>> Stashed changes
   text-shadow: 2px 2px 2px #482ff7;
   cursor: pointer;
 }
+
 .menu {
   display: flex;
 }
@@ -189,7 +190,6 @@ div > .dropdown-item:hover {
 .navbar-hidden {
   background: transparent;
 }
-
 
 .b-navbar-toggle {
   border: 1px solid #482ff7;
@@ -227,18 +227,18 @@ div > .dropdown-item:hover {
 }
 @media only screen and (max-width: 768px) {
   .navbar-hidden {
-	border: 0;
-	clip: rect(1px, 1px, 1px, 1px); /* 1 */
-	-webkit-clip-path: inset(50%);
-		clip-path: inset(50%);  /* 2 */
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-	white-space: nowrap;            /* 3 */
-}
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px); /* 1 */
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%); /* 2 */
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 3 */
+  }
 
   .nav-menu {
     position: fixed;
