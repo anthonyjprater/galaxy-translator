@@ -122,7 +122,7 @@ nav {
   /* font-family: 'Galaxy', sans-serif; */
   color: red;
   text-shadow: 2px 2px 2px #ff8080, 0 0 2px #482ff7, 0 0 2px #482ff7;
-  font-family: SF Distant Galaxy Outline;
+  font-family: SF Distant Galaxy Outline, 'Questrial', sans-serif;
   transition: text-shadow 250ms ease, color 250ms ease;
 }
 .logo:hover,
@@ -181,17 +181,7 @@ div > .dropdown-item:hover {
 }
 
 .navbar-hidden {
-	border: 0;
-	clip: rect(1px, 1px, 1px, 1px); /* 1 */
-	-webkit-clip-path: inset(50%);
-		clip-path: inset(50%);  /* 2 */
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-	white-space: nowrap;            /* 3 */
+  background: transparent;
 }
 
 
@@ -230,6 +220,20 @@ div > .dropdown-item:hover {
   background-color: #ccc;
 }
 @media only screen and (max-width: 768px) {
+  .navbar-hidden {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px); /* 1 */
+	-webkit-clip-path: inset(50%);
+		clip-path: inset(50%);  /* 2 */
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap;            /* 3 */
+}
+
   .nav-menu {
     position: fixed;
     left: -100%;

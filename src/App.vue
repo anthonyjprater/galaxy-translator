@@ -7,6 +7,8 @@
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
 @font-face {
   font-family: 'Moonhouse';
   font-style: normal;
@@ -38,6 +40,7 @@
   font-display: swap;
   src: url('./assets/fonts/Poppins-Bold.ttf') format('truetype');
 }
+
 
 @media (max-width: 700px) {
   textarea.form {

@@ -105,7 +105,7 @@ a {
 .jumbotron {
   z-index: 1;
   color: gold;
-  font-family: SF Distant Galaxy Outline;
+  font-family: SF Distant Galaxy Outline, 'Questrial', 'Tahoma' sans-serif;
   display: grid;
   place-items: center;
   height: 100vh;
