@@ -8,6 +8,9 @@ export default {
       'sith',
       'jedi',
       'yoda',
+      'sword',
+      'laser',
+      'death star',
       'trooper',
     ]
     const randomQuery =

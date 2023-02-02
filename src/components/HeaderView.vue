@@ -154,9 +154,15 @@ nav {
   text-shadow: 1px 1px 0px #fff;
   letter-spacing: 3px;
 }
+<<<<<<< Updated upstream
 .b-nav-item .nav-link:hover {
   color: #fff;
+=======
+.b-nav-item:hover {
+  color: #bbb;
+>>>>>>> Stashed changes
   text-shadow: 2px 2px 2px #482ff7;
+  cursor: pointer;
 }
 .menu {
   display: flex;

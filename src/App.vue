@@ -6,9 +6,13 @@
   </div>
 </template>
 
+<<<<<<< Updated upstream
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
+=======
+<style scoped>
+>>>>>>> Stashed changes
 @font-face {
   font-family: 'Moonhouse';
   font-style: normal;
