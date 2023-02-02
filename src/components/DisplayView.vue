@@ -4,6 +4,7 @@ import { onMounted, ref } from 'vue'
 import GalleryServices from '@/services/GalleryServices.js'
 
 const images = ref(null)
+const siteCredit = ref('https://www.unsplash.com')
 
 onMounted(() => {
   // fetch event (by id) and set local data

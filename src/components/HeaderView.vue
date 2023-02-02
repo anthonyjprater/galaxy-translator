@@ -1,10 +1,21 @@
+<script setup>
+import { ref } from 'vue'
+
+const isActive = ref(false)
+
+function toggleNav(){
+  isActive.value = !isActive.value
+  document.querySelector('.navbar-collapse').classList.toggle('navbar-hidden')
+}
+</script>
+
 <template>
   <header class="main">
     <nav class="b-navbar navbar-expand-lg">
       <div class="nav__wrapper b-container-fluid">
         <a class="b-navbar-brand" href="#">
           <h1
-            class="logo mr-1 text-center b-container"
+            class="logo"
             data-toggle="tooltip"
             data-placement="top"
             title="A long time ago in a galaxy far, far away...."
@@ -22,9 +33,9 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
           :class="{ active: isActive }"
-          @click="myFilter"
+          @click="toggleNav"
         >
-          Menu
+          
           <div class="hamburger--close">
             <span class="bar b-navbar-toggler-icon"></span>
             <span class="bar b-navbar-toggler-icon"></span>
@@ -32,7 +43,7 @@
           </div>
         </button>
         <!-- binding a class based on the isActive truthy to the nav menu -->
-        <div id="navbarsExample05" class="b-collapse navbar-collapse">
+        <div id="navbarsExample05" class="navbar-collapse navbar-hidden">
           <!-- router-link to nav for each main app vue -->
           <ul
             id="js-menu"
@@ -74,6 +85,15 @@
 </template>
 
 <style scoped>
+
+@media (max-width:700px) {
+  .logo {
+    text-align: center;
+    max-width: 150px;
+    letter-spacing: 1px;
+  }
+}
+
 h1 {
   font-size: 1.5rem;
 }
@@ -102,10 +122,11 @@ nav {
   /* font-family: 'Galaxy', sans-serif; */
   color: red;
   text-shadow: 2px 2px 2px #ff8080, 0 0 2px #482ff7, 0 0 2px #482ff7;
-  font-family: SF Distant Galaxy Outline;
+  font-family: SF Distant Galaxy Outline, 'Questrial', sans-serif;
   transition: text-shadow 250ms ease, color 250ms ease;
 }
-.logo:hover {
+.logo:hover,
+.logo:focus {
   color: #fff;
   text-shadow: 1px 1px 0px gold, 0 0 0px yellow, 0 0 0px yellow;
   border-radius: 8px;
@@ -129,10 +150,12 @@ nav {
   box-shadow: 3px 3px 3px #bbb;
 }
 .b-nav-item .nav-link {
-  color: #2f2f2f;
+  color: #6f6f6f;
+  text-shadow: 1px 1px 0px #fff;
+  letter-spacing: 3px;
 }
 .b-nav-item .nav-link:hover {
-  color: #bbb;
+  color: #fff;
   text-shadow: 2px 2px 2px #482ff7;
 }
 .menu {
@@ -152,6 +175,16 @@ div > .dropdown-item:hover {
   background-color: #000;
   line-height: 1.5rem;
 }
+
+.navbar-collapse {
+  margin-left: -50px;
+}
+
+.navbar-hidden {
+  background: transparent;
+}
+
+
 .b-navbar-toggle {
   border: 1px solid #482ff7;
   border-radius: 10px;
@@ -169,8 +202,10 @@ div > .dropdown-item:hover {
   font-family: 'Moonhouse';
   letter-spacing: 0.2rem;
   border-radius: 5px;
-  box-shadow: -2px 1px 15px 1px #888;
+  box-shadow: 4px 2px 8px 1px #aaa;
   transition: box-shadow 250ms ease-in;
+  font-size: 1.1em;
+  text-shadow: 1px 1px 1px #aaa;
 }
 .hamburger:hover {
   box-shadow: 2px 2px 8px 1px #0000c9;
@@ -185,12 +220,29 @@ div > .dropdown-item:hover {
   background-color: #ccc;
 }
 @media only screen and (max-width: 768px) {
+  .navbar-hidden {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px); /* 1 */
+	-webkit-clip-path: inset(50%);
+		clip-path: inset(50%);  /* 2 */
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap;            /* 3 */
+}
+
   .nav-menu {
     position: fixed;
     left: -100%;
     top: 8rem;
     flex-direction: column;
+    justify-content: space-between;
     background-color: #000;
+    padding: 2rem;
+    height: 50vh;
     width: 100%;
     border-radius: 10px;
     text-align: center;
@@ -199,6 +251,7 @@ div > .dropdown-item:hover {
   }
   .nav-menu.active {
     left: 0;
+    top: 175px;
     z-index: 2;
   }
   .menu {
