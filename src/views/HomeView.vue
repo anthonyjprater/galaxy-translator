@@ -81,7 +81,7 @@ a {
   background: #000;
   color: #ffc107;
   box-shadow: inset 0 0 1px 1px #ffc107, -2px -2px 5px 1px #fff;
-  font-family: SF Distant Galaxy Outline;
+  font-family: SF Distant Galaxy Outline, 'Questrial', 'Tahoma' sans-serif;
   font-size: 1.2rem;
   letter-spacing: 0.2rem;
   text-shadow: 2px 2px 3px #fff;
