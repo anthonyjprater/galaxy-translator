@@ -19,7 +19,7 @@ const isActive = ref(false)
   <div>
     <img
       class="gallery__image"
-      :src="item.urls.regular"
+      :src="item.urls.small_s3"
       :alt="item.alt_description"
       :title="item.description"
       :class="[{ active: isActive }, index % 2 === 0 ? 'red' : 'green']"

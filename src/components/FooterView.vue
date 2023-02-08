@@ -6,11 +6,8 @@
       <div class="footer__cr flex-fill text-center">
         <p class="footer__contact">
           Created by AP for
-          <a
-            class="footer__contact_link"
-            target="_blank"
-            href="https://github.com/UWFront-End-Cert/html300-v2/tree/master/lesson07/assignment"
-            >UW-HTML300</a
+          <div
+            class="footer__contact_link">UW-HTML300</div
           >
         </p>
       </div>
@@ -95,13 +92,14 @@
 }
 .footer__contact {
   letter-spacing: 0.2rem;
+  color: #6a6a6a;
 }
 .footer__contact_link {
   text-decoration: none;
-  text-shadow: 0px 0px 0px #4b2e83, 1px 1px 2px #85754d;
+  text-shadow: 0px 0px 0px #957ec4;
 }
 .footer__contact_link:hover {
-  font-size: 1.1rem;
+  color: #fff;
 }
 /*social media links requiring font awesome update*/
 .icons {

@@ -3,10 +3,11 @@ import { ref } from 'vue'
 import TranslatorServices from '@/services/TranslatorServices.js'
 
 const input = ref(null)
+const selected =ref(null)
 const translation = ref(null)
 
-function translate(text) {
-  return TranslatorServices.getTranslation(text)
+function translate(selected,text) {
+  return TranslatorServices.getTranslation(selected,text)
     .then((response) => response.json())
     .then((data) => {
       translation.value = data.contents.translated
@@ -41,31 +42,40 @@ function freshStart() {
               class="translator col-12 d-flex flex-column justify-content-center align-items-center"
             >
               <h1 class="translator__heading">Translator</h1>
-              <div id="prompt" class="translator__prompt bubble">
-                What text would you like me to translate for you?
-              </div>
               <form action="" class="translator__form text-center my-3">
-                <div id="userInput" class="bubble">
+                <div id="userInput">
                   <textarea
                     id="ytext"
                     v-model="input"
                     debounce="500"
                     name="ytext"
-                    cols="40"
-                    rows="12"
+                    cols="30"
+                    rows="5"
                     class="form"
                     placeholder="Please type your text here so C-3P0 can translate it ... for you..."
                   />
                 </div>
-                <span id="outPut" class="bubble text-output">{{
+                <span id="outPut" class="text-output">{{
                   translation
-                }}</span>
+                }}
+                </span>
+                <label for="language-select" class="translator__prompt">Choose a language</label>
+                <select name="language" id="language-select" class="language__dropdown" v-model="selected">
+                  <option disabled value="">Please choose a language</option>
+                  <option value="yoda">Yoda</option>
+                  <option value="sith">Sith</option>
+                  <option value="gungan">Gungan</option>
+                  <option value="huttese">Huttese</option>
+                  <option value="mandalorian">Mandalorian</option>
+                  <option value="cheunh">Cheunh</option>
+                  <option value="aurebesh">Aurebesh</option>
+                </select>
                 <button
                   id="translateButton"
                   type="button"
                   name="translate"
                   class="hidden btn btn-outline-light my-2 form__button"
-                  @click.prevent="translate(input)"
+                  @click.prevent="translate(selected,input)"
                 >
                   Translate
                 </button>
@@ -108,7 +118,7 @@ function freshStart() {
 .text-output {
   color: #8520e3;
   border-radius: 4px;
-  font-family: 'Tahoma', sans-serif;
+  font-family: sans-serif;
   font-size: 1rem;
   border-radius: 4px;
   box-shadow: 1px -1px 15px 1px #0000c9;
@@ -121,13 +131,31 @@ textarea {
   opacity: 1;
   color: yellow;
   letter-spacing: 0.2rem;
+  padding: 1em;
   line-height: 1.2rem;
   background-color: #000;
   border: 0 solid #000;
   border-radius: 10px;
   font-family: 'Poppins';
   font-weight: bold;
+  margin-bottom: 0.75rem;
 }
+
+textarea:focus {
+  background: #3d3d3d;
+  outline: none;
+}
+
+.language__dropdown {
+  background: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #cacaca;
+  border-radius: 8px;
+  padding: 0.5em 0.5em;
+}
+
+
 .form__button {
   background-color: grey;
   border-radius: 6px;
@@ -144,7 +172,8 @@ textarea {
   box-shadow: 1px 1px 10px 2px #fff;
 }
 .translator__prompt {
-  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+  margin: 1rem;
 }
 
 h2 {
@@ -152,7 +181,7 @@ h2 {
 }
 /* Styling for Hologram Image */
 .avatar {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
   filter: invert(1) opacity(0.2);
   border-radius: 50%;
