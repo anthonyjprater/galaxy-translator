@@ -117,10 +117,9 @@ nav {
   justify-content: space-between;
 }
 .logo {
-  /* font-family: 'Galaxy', sans-serif; */
+  font-family: 'Galaxy', sans-serif;
   color: red;
   text-shadow: 2px 2px 2px #ff8080, 0 0 2px #482ff7, 0 0 2px #482ff7;
-  font-family: SF Distant Galaxy Outline, 'Questrial', 'Tahoma' sans-serif;
   transition: text-shadow 250ms ease, color 250ms ease;
 }
 .logo:hover,

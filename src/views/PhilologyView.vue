@@ -79,7 +79,7 @@ const languages = reactive({
 }
 h1 {
   padding: 1rem;
-  font-family: SF Distant Galaxy Outline;
+  font-family: 'Galaxy', sans-serif;
   color: rgb(0, 255, 13);
   text-shadow: 4px 4px 5px #00c900, 2px 2px 2px #2ff748, 2px 2px 8px #2ff748;
 }

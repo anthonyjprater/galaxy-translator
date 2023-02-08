@@ -55,7 +55,7 @@ onMounted(() => {
 
 <style scoped>
 .title__image {
-  font-family: SF Distant Galaxy Outline;
+  font-family: 'Galaxy', sans-serif;
   text-shadow: 4px 4px 5px #0000c9, 2px 2px 2px #482ff7, 2px 2px 8px #482ff7;
   color: #9966cc;
   width: 100%;

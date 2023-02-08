@@ -1,7 +1,7 @@
 export default {
-  getTranslation(userInput) {
+  getTranslation(language,userInput) {
     return fetch(
-      `https://api.funtranslations.com/translate/yoda.json?text=${userInput}`
+      `https://api.funtranslations.com/translate/${language}.json?text=${userInput}`
     )
   },
 }
