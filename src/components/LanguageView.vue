@@ -67,6 +67,7 @@ function toggleAccordion(index) {
   box-shadow: 3px 0 100px 1px blue;
   font-family: 'Moonhouse';
   font-size: 1.25rem;
+  color: #cbcbcb;
   padding: 0.5rem;
   min-width: 10rem;
   border-radius: 10px;
