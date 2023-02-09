@@ -3,11 +3,11 @@ import { ref } from 'vue'
 import TranslatorServices from '@/services/TranslatorServices.js'
 
 const input = ref(null)
-const selected =ref(null)
+const selected = ref(null)
 const translation = ref(null)
 
-function translate(selected,text) {
-  return TranslatorServices.getTranslation(selected,text)
+function translate(selected, text) {
+  return TranslatorServices.getTranslation(selected, text)
     .then((response) => response.json())
     .then((data) => {
       translation.value = data.contents.translated
@@ -28,9 +28,12 @@ function freshStart() {
       <aside class="col-12 col-sm-4 sidebar">
         <figure class="img">
           <img
+            alt="a golden protocol droid"
+            width="640"
+            height="427"
             id="c3po"
             src="@/assets/images/c3po.jpg"
-            class="avatar img-fluid"
+            class="avatar"
           />
         </figure>
       </aside>
@@ -55,12 +58,16 @@ function freshStart() {
                     placeholder="Please type your text here so C-3P0 can translate it ... for you..."
                   />
                 </div>
-                <span id="outPut" class="text-output">{{
-                  translation
-                }}
-                </span>
-                <label for="language-select" class="translator__prompt">Choose a language</label>
-                <select name="language" id="language-select" class="language__dropdown" v-model="selected">
+                <span id="outPut" class="text-output">{{ translation }} </span>
+                <label for="language-select" class="translator__prompt"
+                  >Choose a language</label
+                >
+                <select
+                  name="language"
+                  id="language-select"
+                  class="language__dropdown"
+                  v-model="selected"
+                >
                   <option disabled value="">Please choose a language</option>
                   <option value="yoda">Yoda</option>
                   <option value="sith">Sith</option>
@@ -75,7 +82,7 @@ function freshStart() {
                   type="button"
                   name="translate"
                   class="hidden btn btn-outline-light my-2 form__button"
-                  @click.prevent="translate(selected,input)"
+                  @click.prevent="translate(selected, input)"
                 >
                   Translate
                 </button>
@@ -154,7 +161,6 @@ textarea:focus {
   border-radius: 8px;
   padding: 0.5em 0.5em;
 }
-
 
 .form__button {
   background-color: grey;

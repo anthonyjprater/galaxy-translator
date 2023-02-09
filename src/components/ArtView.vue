@@ -19,6 +19,8 @@ const isActive = ref(false)
   <div>
     <img
       class="gallery__image"
+      height="200"
+      width="200"
       :src="item.urls.small_s3"
       :alt="item.alt_description"
       :title="item.description"

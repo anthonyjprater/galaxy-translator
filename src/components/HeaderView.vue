@@ -147,7 +147,7 @@ nav {
   box-shadow: 3px 3px 3px #bbb;
 }
 .b-nav-item .nav-link {
-  color: #6f6f6f;
+  color: #969696;
   text-shadow: 1px 1px 0px #fff;
   letter-spacing: 3px;
 }

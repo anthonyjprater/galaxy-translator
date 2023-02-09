@@ -4,12 +4,10 @@
       class="footer mt-5 col-12 d-flex flex-column flex-md-row align-items-center"
     >
       <div class="footer__cr flex-fill text-center">
-        <p class="footer__contact">
+        <div class="footer__contact">
           Created by AP for
-          <div
-            class="footer__contact_link">UW-HTML300</div
-          >
-        </p>
+          <div class="footer__contact_link">UW-HTML300</div>
+        </div>
       </div>
       <div class="icons d-flex flex-nowrap flex-fill">
         <a href="https://www.facebook.com/">
@@ -92,7 +90,7 @@
 }
 .footer__contact {
   letter-spacing: 0.2rem;
-  color: #6a6a6a;
+  color: #969696;
 }
 .footer__contact_link {
   text-decoration: none;
