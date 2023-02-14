@@ -22,6 +22,7 @@ import {
 library.add(faFacebook, faInstagram, faGithub, faYoutube)
 
 import './assets/main.css'
+import './registerServiceWorker'
 
 const app = createApp(App)
 
